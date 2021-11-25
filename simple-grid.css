@@ -16,27 +16,6 @@ body {
   font-size: 100%;
 }
 
-
-/* POSITIONING */
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.justify {
-  text-align: justify;
-}
-
 /* ==== GRID SYSTEM ==== */
 
 .container {
@@ -129,13 +108,13 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
+@media only screen and (min-width: 540px) {  
   .container {
     width: 80%;
   }
 }
 
-@media only screen and (min-width: 45em) {  /* 720px */
+@media only screen and (min-width: 720px) {  
   .col-1 {
     width: 4.33%;
   }

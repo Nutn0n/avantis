@@ -197,9 +197,11 @@ header .site-menu .contact:hover {
 }
 
 
+
 @media only screen and (max-width: 800px) {
     .desktop-menu-item {
         display: none;
     }
+
 
   }
