@@ -197,6 +197,23 @@ header .site-menu .contact:hover {
     padding:0 200px;
 }
 
+/* Timeline */ 
+
+.timeline {
+    min-height: 100vh;
+    background: #B7C2C6;
+}
+
+/* Footer */ 
+
+.footer {
+    text-align: center;
+    color: var(--white);
+    background: var(--dark-purple);
+    padding:20% 0 40px;
+}
+
+.footer 
 
 
 @media only screen and (max-width: 800px) {
