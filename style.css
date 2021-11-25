@@ -203,5 +203,9 @@ header .site-menu .contact:hover {
         display: none;
     }
 
+    .mechanism p {
+        padding:0;
+    }
+    
 
   }
