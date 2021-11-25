@@ -100,8 +100,9 @@ button {
     margin:40px 0;
 }
 
+
 button:hover {
-    background-color:var(--dark-purple);
+    background-color:var(--black);
     color:var(--white);
     transition: var(--transition);
 }
@@ -146,7 +147,7 @@ header .site-menu .contact {
 }
 
 header .site-menu .contact:hover {
-    background-color: var(--primary);
+    background-color:var(--black);
     color:var(--white);
 }
 
