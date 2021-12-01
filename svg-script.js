@@ -12,7 +12,7 @@ function svg_onscroll(){
     updatePosition('#svg-tree-wrap')
     updatePosition('#svg_phone_2')
     updatePosition('#flow-mechanism')    
-    
+    updatePosition('#title')
 }
 
 // let cp = {x:0,y:0};

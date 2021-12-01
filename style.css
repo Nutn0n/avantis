@@ -215,6 +215,20 @@ header .site-menu .contact:hover {
     min-height: 100vh;
     background: #B7C2C6;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.padding{
+    padding: 4em;
+}
 
 /* Footer */ 
 
@@ -677,4 +691,96 @@ div#svg_phone_2-c {
 #svg-tree-wrap {
     --y: calc( var(--screen-t-pct) * 2px - 100px);
     margin-top: var(--y) !important;
+}
+/* .timeline-time {
+    position: sticky;
+    top: calc(70px + 1em);
+} */
+/* 
+.timeline-time h3 {
+    position: absolute;
+    left: calc(-100% - 1.8rem);
+    width: 100%;
+    background: #f004;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+} */
+
+
+.timeline-box {
+    --timeline-bg:#B7C2C6;
+    --progress-top:40vh;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--timeline-bg);
+    
+}
+
+.timeline-time-wrap,
+.timeline-text-wrap {
+    width: calc(50% - 32px);
+    box-sizing: border-box;
+}
+.timeline-line-wrap,
+.timeline-time-wrap,
+.timeline-text-wrap{
+    padding-bottom: 2rem;
+}
+.timeline-line-wrap{
+    width: 64px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right,var(--timeline-bg),var(--timeline-bg) 47%,white 47%,white 53%,var(--timeline-bg) 53%,var(--timeline-bg));
+    padding-top: 2.5rem;
+}
+.timeline-text-wrap{
+    padding-top: 2.5rem;
+/* background: #f008; */
+}
+.timeline-time-wrap{
+    text-align: right;
+    color: var(--dark-purple);
+    /* background: #ff08; */
+
+}
+.timeline-time h3{
+    /* background: #0ff8; */
+}
+.timeline-time{
+    /* background: #F089; */
+    position: sticky;
+    top: var(--progress-top);
+    padding-top: 2rem;
+}
+.timeline-line-dot{
+    --dot-size:30px;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: white;
+    border-radius: 100%;
+    margin-left: calc((100% - var(--dot-size))/2);
+    position: sticky;
+    top: calc(var(--progress-top) + 2.3rem);
+    box-sizing: border-box;
+    border:6px solid var(--timeline-bg);
+}
+
+
+.timeline-box-top,.timeline-box-bottom {
+    margin-left: calc(50% - 32px);
+}
+.timeline-box-top::after,.timeline-box-bottom::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom,var(--timeline-bg),transparent);
+}
+.timeline-box-bottom::after{
+    background:linear-gradient(to top,var(--timeline-bg),transparent);
+}
+
+.timeline > div > div > h3{
+    color: var(--dark-purple)
 }
