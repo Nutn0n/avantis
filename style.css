@@ -363,6 +363,8 @@ g#Layer_2 {
 #svg-leaf-1{
     animation: yo 5s infinite;
     transform-origin: 68% 30%;
+    transition: all .1s;
+    /* transform: rotate(calc(1deg * var(--screen-t-sin) -70deg)) */
 }
 @keyframes yo{
     0%,100%{
@@ -564,11 +566,21 @@ g#Layer_2 {
 
 #svg-phone{
     transition: all .2s;
-    transform: translate(0%,0%);
+    transform: translateY(var(--y));
+    --y: calc(var(--screen-t-pct)/10 * 1%);
 }
 
+#board-3-wrap{
+    transition: all .2s;
+    transform: translateY(var(--y));
+    --y: calc(var(--screen-t-pct)/15 * 1%);
+}
+#svg-globe{
+    position: relative;
+    --y: calc(var(--screen-b-pct) * 2px);
+    margin-top: var(--y) !important;
+}
 #svg-board{
-    animation:svg-board 2s 1;
 }
 @keyframes svg-board{
     0%,50%{opacity: 0;}
@@ -622,7 +634,8 @@ g#Layer_2 {
     position: relative;
     width: 90%;
     left: -7%;
-    top: -4%;
+    --y: calc(var(--screen-t-pct) * .5% - 25%);
+    top: var(--y);
 }
 div#svg_phone_2-c {
     position: relative;
@@ -636,4 +649,32 @@ div#svg_phone_2-c {
 
 #svg-robot{
     /* fill:red !important */
+}
+
+
+.animation-appear{
+    opacity: 0;
+    margin-top:5vh;
+    position: relative;
+}
+.animation-appear[data-onscreen="1"],
+.animation-appear[data-onscreen="-1"]{
+    animation: appear 1s 1 forwards;
+    margin-top:0vh;
+    opacity: 1;
+}
+@keyframes appear{
+    0%,15%{
+        margin-top:5vh;
+        opacity: 0;
+    }
+    100%{
+        margin-top:0vh;
+        opacity: 1;
+    }
+}
+
+#svg-tree-wrap {
+    --y: calc( var(--screen-t-pct) * 2px - 100px);
+    margin-top: var(--y) !important;
 }
