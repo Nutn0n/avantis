@@ -230,6 +230,30 @@ header .site-menu .contact:hover {
     padding: 4em;
 }
 
+
+ /* Screenshot */ 
+
+ .screenshot {
+    padding:100px 0;
+    background:var(--white);
+ }
+
+ .screen-box {
+     display: block;
+     width:100%;
+     border-radius: var(--radius);
+     background-color:#f6e4fa;
+ }
+
+ .screenshot-text .content {
+    padding: 200px 70px;
+ }
+
+ .screenshot-text h2{
+     color: var(--dark-purple);
+ }
+
+
 /* Footer */ 
 
 .footer {
@@ -295,6 +319,14 @@ header .site-menu .contact:hover {
         padding:0;
     }
     
+    .screenshot {
+        background-color: #f6e4fa;
+    }
+
+    .screenshot .content {
+        padding:0;
+        margin:0;
+    }
 
   }
 
