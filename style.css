@@ -239,11 +239,24 @@ header .site-menu .contact:hover {
  }
 
  .screen-box {
-     display: block;
+     display: flex;
      width:100%;
+     min-height: 300px;
      border-radius: var(--radius);
      background-color:#f6e4fa;
  }
+
+ .screenshot-iphone {
+     width:50%;
+     background-color:var(--purple);
+     display: inline-block;
+ }
+
+ .screenshot-text {
+    width:50%;
+    display: inline-block;
+}
+
 
  .screenshot-text .content {
     padding: 200px 70px;
@@ -314,6 +327,19 @@ header .site-menu .contact:hover {
     .desktop-menu-item {
         display: none;
     }
+
+    .screen-box {
+        display: block;
+    }
+    .screenshot-iphone, .screenshot-text {
+        width:100%;
+        display: block;
+    }
+
+    .screenshot-text{
+        padding-top: 50px;
+    }
+
 
     .mechanism p {
         padding:0;
@@ -815,5 +841,5 @@ div#svg_phone_2-c {
 
 .timeline-image {
     margin: 20px 0;
-    border-radius: 40px;
+    border-radius: 10px;
 }
