@@ -166,7 +166,7 @@ header .site-menu .contact:hover {
 /* Hero */ 
 
 .hero {
-    min-height: 140vh;
+    min-height: 100vh;
     background-image:url(assets/bg.svg);
     background-size: cover;
     background-position: bottom;
@@ -175,6 +175,7 @@ header .site-menu .contact:hover {
 
 .hero-items {
     padding-top:200px;
+    margin-bottom: 200px;
 }
 
 .hero-items p {
@@ -184,7 +185,8 @@ header .site-menu .contact:hover {
 .hero-animation {
     background:url(assets/hero-static.png);
     background-size: contain;
-    height:100%;
+    height:350px;
+    overflow: visible;
     background-repeat: no-repeat;
 }
 
@@ -527,6 +529,18 @@ header .site-menu .contact:hover {
 
     .screenshot-text{
         padding-top: 50px;
+    }
+
+    .timeline-time-wrap {
+        display: none;
+    }
+
+    .timeline-box-top, .timeline-box-bottom {
+        visibility: hidden;
+    }
+
+    .timeline-time-wrap, .timeline-text-wrap {
+        width:calc(90% - 32px)!important;
     }
 
 
@@ -970,6 +984,11 @@ div#svg_phone_2-c {
     width: calc(50% - 32px);
     box-sizing: border-box;
 }
+
+.timeline-text-wrap .hide-on-desktop {
+    color: var(--dark-purple);
+}
+
 .timeline-line-wrap,
 .timeline-time-wrap,
 .timeline-text-wrap{
