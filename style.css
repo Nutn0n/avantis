@@ -275,6 +275,44 @@ header .site-menu .contact:hover {
                 url(assets/usa.jpg);
   }
 
+  .market-name-list .flag {
+      width:12px;
+      height:12px;
+      display: inline-block;
+      border-radius: 360px;
+      background:#fff;
+      margin-right: 4px;
+      margin-bottom:-2px;
+  }
+
+  .market-name-set .flag {
+    background: url(assets/thai.svg);
+    background-size:cover;
+  }
+
+  .market-name-sti .flag {
+    background: url(assets/singapore.svg);
+    background-size:cover;
+  }
+
+  .market-name-hsi .flag {
+    background: url(assets/hongkong.svg);
+    background-size:cover;
+    background-position: center center;
+  }
+
+  .market-name-ndx .flag {
+    background: url(assets/us.svg);
+    background-size:cover;
+  }
+
+  .market-name-n225 .flag {
+    background: url(assets/japan.svg);
+    background-size:cover;
+    background-position: center center;
+  }
+
+
  .screenshot-iphone.SET {
     background: url(assets/bangkok.jpg);
  }
@@ -397,7 +435,9 @@ header .site-menu .contact:hover {
 }
 
 .iphone-wrapper .market .market-name-list {
-    margin-right:10px;
+    margin-right:6px;
+    margin-top:10px;
+    padding-bottom:4px;
 }
 
 .iphone-wrapper .market .arrow-up {
