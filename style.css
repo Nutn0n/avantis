@@ -449,10 +449,22 @@ header .site-menu .contact:hover {
     border: 2px solid #fff;
 }
 
+.hide-on-desktop {
+    display: none;
+}
+
 
 @media only screen and (max-width: 800px) {
     .desktop-menu-item {
         display: none;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .hide-on-desktop {
+        display: block;
     }
 
     .screen-box {
