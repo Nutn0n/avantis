@@ -265,6 +265,16 @@ header .site-menu .contact:hover {
      transition: var(--transition);
  }
 
+ .preload-images {
+    visibility: hidden; 
+    width: 0;
+    height: 0;
+    background: url(assets/bangkok.jpg),
+                url(assets/hongkong.jpg),
+                url(assets/tokyo.jpg),
+                url(assets/usa.jpg);
+  }
+
  .screenshot-iphone.SET {
     background: url(assets/bangkok.jpg);
  }
