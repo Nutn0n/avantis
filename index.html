@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="effect-js.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
     <meta property="og:title" content="Avantis" />
     <meta property="og:description"
@@ -41,16 +42,22 @@
         <div class="container">
             <div class="row hero-items" id="hero">
                 <div class="col-6 hero-title">
+                    
+                    <div class="col-6 hero-animation hide-on-desktop">
+                    </div>
+
                     <div id="title" class="animation-appear">
                         <h1>Avantis Protocal</h1>
                         <h3>DeFi multi-asset trading platform</h3>
                         <p>Invest in global assets via a single state-of-the-art investment platform</p>
                         <a href="#"><button>Read white paper</button></a>
                     </div>
+                </div>
 
+                <div class="col-6 hero-animation hide-on-mobile">
                 </div>
-                <div class="col-6 hero-animation">
-                </div>
+                
+                
             </div>
 
         </div>
@@ -94,7 +101,7 @@
             </div>
 
             <div class="row features-item">
-                <div class="col-6">
+                <div class="col-6 hide-on-mobile">
                     <h2>Large universe of asset available</h2>
                     <p>
                         Unlike other synthetic asset platforms that support limited assets, Avantis supports a wide
@@ -159,6 +166,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-6 hide-on-desktop">
+                    <h2>Large universe of asset available</h2>
+                    <p>
+                        Unlike other synthetic asset platforms that support limited assets, Avantis supports a wide
+                        range of assets.
+                    </p>
+                    <p>
+                        You can trade most stocks on major exchanges like NYSE, Nasdaq, Hong Kong Stock Exchange, Tokyo
+                        Stock Exchange, Shanghai, and Shenzhen Stock Exchange (H-share).
+                    </p>
+                    <p>
+                        Commodities in Chicago Board of Trade, Comex, Nymex, Global ETFs, mutual funds And more assets
+                        will be added to our roadmap.
+                    </p>
+                    <a href="#"><button>Learn more</button></a>
+                </div>
+
             </div>
 
             <div class="row features-item">
@@ -203,7 +228,7 @@
 
 
             <div class="row features-item">
-                <div class="col-6">
+                <div class="col-6 hide-on-mobile">
                     <h2>State-of-the-art
                         robo-advisory platform</h2>
                     <p>
@@ -231,6 +256,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-6 hide-on-desktop">
+                    <h2>State-of-the-art
+                        robo-advisory platform</h2>
+                    <p>
+                        Unlike other Dex trading platforms with only basic trading tools, the Avantis trading platform
+                        comes with a comprehensive mobile robo-advisory platform. The robo-advisor will advise and
+                        assist on investments in all asset classes, set notifications, monitor market movement, and help
+                        manage portfolio risks 24/7.
+                    </p>
+                    <a href="#"><button>Learn more</button></a>
+                </div>
             </div>
 
 
@@ -249,14 +285,15 @@
         </div>
         <!-- Flow of Mechanism -->
         <div class="container animation-appear" id="flow-mechanism">
-           
+            <br/>  <br/>
+            <img style="width:100%; max-width:800px;" src="assets/machanism-static.png"></img>
         </div>
 
     </div>
 
     <div class="timeline">
         <div class="container">
-            <div class="flex justify-center align-center padding">
+            <div class="timeline-title flex justify-center align-center padding">
                 <h3>Avantis Timeline</h3>
             </div>
             <div id="timeline-wrap">
@@ -332,10 +369,31 @@
     <div class="screenshot">
         <div class="container">
             <div class="screen-box row">
-                <div class="col-6 screenshot-iphone">
+                <div class="screenshot-iphone" id="iphone-animation">
+
+                    <div class="iphone-wrapper">
+                        <span class="market">
+                            <h4>Market</h4>
+                            <h6><span class="market-name-list market-name-set"><span class="flag"></span>SET</span> 
+                                <span class="market-name-list market-name-sti"><span class="flag"></span>STI</span>
+                                <span class="market-name-list market-name-hsi"><span class="flag"></span>HSI</span>
+                                <span class="market-name-list market-name-ndx"><span class="flag"></span>NDX</span>
+                                <span class="market-name-list market-name-n225"><span class="flag"></span>N225</span>
+                            <h6>
+                            <span class="spacing"></span>
+                            <h2 class="market-name"></h2>
+                            <h5 class="market-name-full"></h5>
+                            <h2 class="market-value"></h2>
+                            <h5><span class="market-status"></span> 
+                                <span class="arrow-up">↑<span>
+                            </h5>
+                            <h6>Dec 07, 2021 16:39:45</h6>
+                        </span>
+
+                    </div>
                     
                 </div>
-                <div class="col-6 screenshot-text">
+                <div class="screenshot-text">
                     <div class="content">
                     <h2>Lorem ipsum dolor</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, at tempore esse nihil quam dolores delectus sint a maiores non dolorem explicabo, impedit quibusdam reprehenderit accusantium, quia distinctio necessitatibus suscipit!</p>

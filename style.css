@@ -195,6 +195,7 @@ header .site-menu .contact:hover {
 
 .features-item {
     min-height: 100vh;
+    margin-bottom:100px;
 }
 
 /* rectangle background */ 
@@ -510,7 +511,14 @@ header .site-menu .contact:hover {
 }
 
 
+
 @media only screen and (max-width: 800px) {
+
+
+    .timeline-title {
+        padding-bottom:0;
+    }
+
     .desktop-menu-item {
         display: none;
     }
