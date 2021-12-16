@@ -545,6 +545,10 @@ header .site-menu .contact:hover {
         height: 250px;
     }
 
+    .features-item {
+        margin:100px 0;
+    }
+
     .hero-items {
         padding-top:100px;
     }
