@@ -174,7 +174,7 @@ header .site-menu .contact:hover {
 }
 
 .hero-items {
-    padding-top:200px;
+    padding-top:300px;
     margin-bottom: 200px;
 }
 
@@ -183,6 +183,7 @@ header .site-menu .contact:hover {
 }
 
 .hero-animation {
+    transform: scale(1.5);
     background:url(assets/hero-static.png);
     background-size: contain;
     height:350px;
@@ -514,6 +515,13 @@ header .site-menu .contact:hover {
 
 @media only screen and (max-width: 800px) {
 
+    .hero-animation {
+        transform: scale(1.1);
+    }
+
+    .hero-items {
+        padding-top:100px;
+    }
 
     .timeline-title {
         padding-bottom:0;
