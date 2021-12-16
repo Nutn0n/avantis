@@ -184,6 +184,7 @@ header .site-menu .contact:hover {
 }
 
 .hero-animation {
+    margin-top: 40px;
     transform: scale(1.5);
     background:url(assets/hero-static.png);
     background-size: contain;
@@ -196,8 +197,12 @@ header .site-menu .contact:hover {
 /* Features */ 
 
 .features-item {
-    min-height: 100vh;
-    margin-bottom:100px;
+    margin-top:300px;
+    margin-bottom:300px;
+}
+
+.features-item h2 {
+    margin-top:100px;
 }
 
 /* rectangle background */ 
@@ -425,7 +430,7 @@ header .site-menu .contact:hover {
      text-align: left;
      margin-left:-110px;
      max-width: 250px;
-     bottom:20px;
+     bottom:10px;
      font-family: "Avenir", sans-serif;
      color: #fff;
  }
@@ -441,7 +446,10 @@ header .site-menu .contact:hover {
 
  .iphone-wrapper .market h2 {
     font-weight: bold;
+    color: var(--white);
 }
+
+
 
 .iphone-wrapper .market .market-name-list {
     margin-right:6px;
@@ -516,8 +524,19 @@ header .site-menu .contact:hover {
 
 @media only screen and (max-width: 800px) {
 
+    h1 {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .features-item h2 {
+        margin-top:0px;
+    }
+
     .hero-animation {
         transform: scale(1.1);
+        height: 250px;
     }
 
     .hero-items {
@@ -526,6 +545,7 @@ header .site-menu .contact:hover {
 
     .timeline-title {
         padding-bottom:0;
+        padding-left:0;
     }
 
     .desktop-menu-item {
