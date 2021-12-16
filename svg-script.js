@@ -9,7 +9,7 @@ function svg_onscroll(){
     let scrollY = window.scrollY;
     updatePosition('#svg-board')
     updatePosition('#svg-globe')
-    updatePosition('#svg-tree-wrap')
+    updatePosition('#svg-tree')
     updatePosition('#svg_phone_2')
     updatePosition('#flow-mechanism')    
     updatePosition('#title')
