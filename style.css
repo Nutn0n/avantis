@@ -69,6 +69,7 @@ h1 {
 h2 {
     font-size: 36px;
     font-weight: normal;
+    color: var(--dark-purple);
 }
 
 h3 {
