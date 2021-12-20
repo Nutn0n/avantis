@@ -13,3 +13,16 @@ setInterval(function(){
         document.getElementById("iphone-animation").classList.add(market[counter]);
     }
 }, 3000);
+
+
+/* Detect Top Scroll */ 
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header-scroll").classList.add("scroll");
+  } else {
+    document.getElementById("header-scroll").classList.remove("scroll");
+  }
+}
