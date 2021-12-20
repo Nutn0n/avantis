@@ -7,6 +7,8 @@ svg_onscroll()
 
 function svg_onscroll(){
     let scrollY = window.scrollY;
+    updatePosition('#svg-header-mob')
+    updatePosition('#svg-header')
     updatePosition('#svg-board')
     updatePosition('#svg-globe')
     updatePosition('#svg-tree')
@@ -52,29 +54,35 @@ function $$(s){
 function updatePosition(s){
     let el = $(s)
     let data = el.getClientRects()[0]
-    let screen = {'onscreen':0,'top':data.top,'bottom':vh-data.top,'b_px':0,'b_pct':0,'t_px':0,'t_pct':0}
-    if (screen.top+data.height>=0 && screen.bottom>=0){
-        screen.onscreen = 1;
-        screen.b_px = parseInt(screen.bottom)
-        screen.t_px = parseInt(screen.top)
+    console.log(data)
+    if (data != undefined) {
+
+        
+        
+        let screen = {'onscreen':0,'top':data.top,'bottom':vh-data.top,'b_px':0,'b_pct':0,'t_px':0,'t_pct':0}
+        if (screen.top+data.height>=0 && screen.bottom>=0){
+            screen.onscreen = 1;
+            screen.b_px = parseInt(screen.bottom)
+            screen.t_px = parseInt(screen.top)
+        }
+        if(screen.top+data.height<=0){
+            screen.onscreen = -1;
+            screen.t_px = parseInt(data.height*-1)
+        }
+        if(screen.bottom>vh){
+            screen.b_px = vh
+        }
+        if(screen.top>vh){
+            screen.t_px = vh
+        }
+        screen.b_pct = parseInt(screen.b_px*100/vh)
+        screen.t_pct = parseInt(screen.t_px*100/vh)
+        setProp(el,'screen-t-px',screen.t_px)
+        setProp(el,'screen-b-px',screen.b_px)
+        setProp(el,'screen-t-pct',screen.t_pct)
+        setProp(el,'screen-b-pct',screen.b_pct)
+        setProp(el,'screen-visible',screen.onscreen)
+        setProp(el,'screen-t-sin',Math.abs(Math.sin(screen.t_pct/5)*100))
+        el.dataset.onscreen = screen.onscreen
     }
-    if(screen.top+data.height<=0){
-        screen.onscreen = -1;
-        screen.t_px = parseInt(data.height*-1)
-    }
-    if(screen.bottom>vh){
-        screen.b_px = vh
-    }
-    if(screen.top>vh){
-        screen.t_px = vh
-    }
-    screen.b_pct = parseInt(screen.b_px*100/vh)
-    screen.t_pct = parseInt(screen.t_px*100/vh)
-    setProp(el,'screen-t-px',screen.t_px)
-    setProp(el,'screen-b-px',screen.b_px)
-    setProp(el,'screen-t-pct',screen.t_pct)
-    setProp(el,'screen-b-pct',screen.b_pct)
-    setProp(el,'screen-visible',screen.onscreen)
-    setProp(el,'screen-t-sin',Math.abs(Math.sin(screen.t_pct/5)*100))
-    el.dataset.onscreen = screen.onscreen
 }
