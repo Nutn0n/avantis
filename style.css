@@ -607,6 +607,10 @@ header .site-menu .contact:hover {
         padding:0;
         margin:0;
     }
+	
+    input {
+    width:100%;
+}
 
 }
 
