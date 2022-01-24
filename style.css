@@ -680,7 +680,11 @@ header .site-menu .contact:hover {
 }
 [data-onscreen="1"] #svg-header-a{
     /*animation: svg-header-a 1s .5s 1 forwards;*/
-    animation: svg-header-a 20s infinite  cubic-bezier(0, 0.5, 0.5, 1);
+    /* animation: svg-header-a 20s infinite  cubic-bezier(0, 0.5, 0.5, 1); */
+
+
+    animation: svg-header-a 20s ease infinite,svg-header-c 3s 1s 1 forwards;
+    
 }
 @keyframes svg-header-a{
     /*0%{
@@ -699,7 +703,8 @@ header .site-menu .contact:hover {
         opacity: 0;
         transform: translateY(100%) rotate(45deg) scale(2);
     }*/
-    0%,5%{
+    
+    /* 0%,5%{
        opacity: 0;
         transform: translateY(-100%) rotate(-45deg) scale(1); 
     }
@@ -716,54 +721,77 @@ header .site-menu .contact:hover {
     100%{
         opacity: 0;
         transform: translateY(-100%) rotate(45deg) scale(0);
-    }
+    } */
+    0%{transform:translateY(0%);}
+    50%{transform:translateY(-20%);}
+    100%{transform: translateY(0%);}
 }
-
+@keyframes svg-header-a-2 {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
 /*coin*/
 #svg-header-b{
     /*display: none;*/ 
     opacity:0;
     width: 9.2%;
     top: 20%;
-    right: -10%;
+    right: 0%;
     margin-top: calc(var(--screen-t-pct)/1.5 * -1%);
 }
 [data-onscreen="1"] #svg-header-b{
     /*animation: svg-header-b 1s 1s 1 forwards;*/
-    animation: svg-header-b 3s .5s infinite ;
+    /* animation: svg-header-b 3s .5s infinite ; */
+    /* animation: svg-header-b 3s .5s forwards,svg-header-b-2 15s 5s ease-in-out infinite; */
+    animation: svg-header-b-2 3s 1.5s 1 forwards;
 }
 @keyframes svg-header-b{
-    0%,90%,100%{
+    /* 0%,90%,100%{
         right: -10%;
         opacity: 0;
     }
     30%,60%{
         right: 3%;
         opacity: 1;
+    } */
+    0%{
+        opacity:0;
+        right:-10%;
     }
+    100%{
+        opacity:1;
+        right:3%;
+    }
+}
+@keyframes svg-header-b-2{
+    from{opacity: 0;}
+    to{opacity: 1;}
+
 }
 #svg-header-c{
     /*display: none;*/
     opacity: 0;
     width: 22%;
     top: 12%;
-    left: 6%;
+    left: 16%;
     margin-top: calc(var(--screen-t-pct)/2 * -1%);
     transform-origin: top right;
 }
 [data-onscreen="1"] #svg-header-c{
     /*animation: svg-header-c 1s 1.5s 1 forwards;*/
-    animation: svg-header-c 6s 1s infinite,svg-header-c-2 15s infinite alternate;
+    animation: svg-header-c 3s .5s 1 forwards,svg-header-c-2 15s infinite alternate;
+    /* animation: svg-header-c 15s .25s ease-in-out infinite; */
 }
 @keyframes svg-header-c{
-    0%,90%,100%{
-        left: 6%;
+    0%{
+        /* left: 6%; */
         opacity: 0;
     }
-    10%,70%{
-        left: 16%;
+    100%{
+        /* left: 16%; */
         opacity: 1;
     }
+    
 }
 @keyframes svg-header-c-2{
     0%{
@@ -776,7 +804,6 @@ header .site-menu .contact:hover {
     }
 }
 #svg-header-d{
-    /*display: none;*/
     opacity: 0;
     width: 14%;
     bottom: 17.5%;
@@ -785,7 +812,7 @@ header .site-menu .contact:hover {
     margin-bottom: calc(var(--screen-t-pct)/3 * 1%);
 }
 [data-onscreen="1"] #svg-header-d{
-    animation: svg-header-d 1.5s 3s 1 forwards;
+    animation: svg-header-d 1.5s 4s 1 forwards;
     /*animation: svg-header-d 6s 3s infinite;*/
 }
 @keyframes svg-header-d {
@@ -799,7 +826,7 @@ header .site-menu .contact:hover {
 
 #svg-header-e{
     /*display: none;*/
-    /*opacity: 0;*/
+    opacity: 0;
     width: 22%;
     top: 47%;
     right: 19%;
@@ -808,12 +835,33 @@ header .site-menu .contact:hover {
 }
 [data-onscreen="1"] #svg-header-e{
     /*animation: svg-header-e 1.5s 2.5s 1 forwards;*/
-    animation: svg-header-e 3s 1.5s infinite;
+    /* animation: svg-header-e 9s 1.5s infinite; */
+
+    animation: svg-header-e-2 6s linear infinite,svg-header-e-3 3s 3s 1 forwards;
 }
-@keyframes svg-header-e {
+/* @keyframes svg-header-e {
     0%,80%,100%{transform:scale(0);}
     20%,70%{transform:scale(1);}
+} */
+
+/* spin */
+@keyframes svg-header-e-2{
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
 }
+
+/* bounce ถ้าอยากลองแบบขึ้นลง เอาคอมเม้น Keyframes ด้านล่างออกได้เลย*/
+/* @keyframes svg-header-e-2{
+    0%{transform: translateY(-3%);}
+    50%{transform: translateY(6%);}
+    100%{transform: translateY(-3%);}
+} */
+@keyframes svg-header-e-3{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
 #svg-header-f{
     /*display: none;*/
     opacity: 1;
