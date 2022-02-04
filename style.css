@@ -844,18 +844,19 @@ header .site-menu .contact:hover {
     20%,70%{transform:scale(1);}
 } */
 
-/* spin */
+/* spin 
 @keyframes svg-header-e-2{
     from{transform: rotateY(0deg);}
     to{transform: rotateY(360deg);}
 }
+*/
 
 /* bounce ถ้าอยากลองแบบขึ้นลง เอาคอมเม้น Keyframes ด้านล่างออกได้เลย*/
-/* @keyframes svg-header-e-2{
+@keyframes svg-header-e-2{
     0%{transform: translateY(-3%);}
     50%{transform: translateY(6%);}
     100%{transform: translateY(-3%);}
-} */
+} 
 @keyframes svg-header-e-3{
     from{opacity: 0;}
     to{opacity: 1;}
