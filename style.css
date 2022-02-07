@@ -1313,7 +1313,7 @@ header .site-menu .contact:hover {
     position: relative;
     width: 90%;
     left: -7%;
-    --y: calc(var(--screen-t-pct) * .5% - 25%);
+    --y: calc(var(--screen-t-pct) * .5% - 5%);
     top: var(--y);
 }
 div#svg_phone_2-c {
